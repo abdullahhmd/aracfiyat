@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <meta charset="utf-8">
+    <title>Araba Ortalama Fiyat</title>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 p-2">
+<div class="container">
+
+<a class="navbar-brand" href="/">Araba Piyasa Fiyatı</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active text-secondary">
+      <a class="nav-link" href="/"></i>Arama Sayfası<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/gecmis_aramalar"></i>Geçmiş</a>
+    </li>
+  </ul>
+</div></div>
+</nav>
+    <div class="container">
+
+        <form action="#" method="post">
+          <div class="search-container">
+          <div class="form-group row">
+
+        <label for="film_name" class="col-form-label">Araba Modeli:</label>
+        <div class="col-sm-2">
+        <input name="araba_model" class="form-control" type="text" value="" required>
+        </div>
+        <label for="year" class="col-form-label">Araba Yılı:</label>
+        <div class="col-sm-2">
+          <input class="form-control" type="number" min="1874" max="2020" name="araba_yil" value="" required>
+        </div>
+        <button type="submit" class="btn btn-dark col-md-2 src-button" name="button"><i class="fas fa-search"></i>Ara</button>
+      </div>
+    </div>
+    <div class="search-container">
+    <div class="form-group row">
+    <div class="sonuc">
+      <h1>{{ piyasa_fiyati }}</h1>
+    </div>
+  </div>
+  </body>
+</html>
